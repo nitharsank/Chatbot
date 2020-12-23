@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "Chatbot",
+    "slug": "Chatbot",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "icon.png",
+    "splash": {
+      "image": "splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.nith.foodfinder"
+    },
+    "web": {
+      "favicon": "favicon.png"
+    }
+  }
+}
