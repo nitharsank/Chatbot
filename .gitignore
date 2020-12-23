@@ -31,6 +31,4 @@ amplify-gradle-config.json
 amplifytools.xcconfig
 .secret-*
 
-package-lock.json
-package.json
 yarn.lock
