@@ -1,9 +1,10 @@
 import React, {Component}  from 'react';
 import {Text,View, StyleSheet,TextInput,FlatList,} from 'react-native';
 import AWS from 'aws-sdk/dist/aws-sdk-react-native';
+import {AWS_API_KEY} from "@env";
 AWS.config.region = 'us-east-1'; // Region
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-    IdentityPoolId: 'us-east-1:a080dcca-403a-4554-86bb-56ac0f45b377',
+    IdentityPoolId: AWS_API_KEY,
 });
 let lexRunTime = new AWS.LexRuntime()
 let lexUserId = 'mediumBot' + Date.now()
