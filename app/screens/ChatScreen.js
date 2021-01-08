@@ -1,5 +1,5 @@
 import React, {Component}  from 'react';
-import {Text,View, StyleSheet,TextInput,FlatList,} from 'react-native';
+import {Text,View, StyleSheet,TextInput,FlatList} from 'react-native';
 import AWS from 'aws-sdk/dist/aws-sdk-react-native';
 import {AWS_API_KEY} from "@env";
 AWS.config.region = 'us-east-1'; // Region
@@ -99,31 +99,15 @@ export default class ChatScreen extends Component {
             inputText: message,
             userId: lexUserId,
         }
-        if (startup==0){
-            lexRunTime.postText({
-                botAlias: '$LATEST',
-                botName: 'ShoppingAssistant',
-                inputText: "HelloMessage",
-                userId: lexUserId,
-            }, (err, data) => {
-                if(err) {
-                    
-                }
-                if (data) {
-                    this.showResponse(data)
-                }
-            })
-            startup=1;
-        } else{
-            lexRunTime.postText(params, (err, data) => {
-                if(err) {
-                    
-                }
-                if (data) {
-                    this.showResponse(data)
-                }
-            })
+        lexRunTime.postText(params, (err, data) => {
+        if(err) {
+            
         }
+        if (data) {
+            this.showResponse(data)
+        }
+        })
+        
     }
 showResponse(lexResponse) {
         let lexMessage = lexResponse.message
